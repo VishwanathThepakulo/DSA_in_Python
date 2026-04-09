@@ -87,31 +87,53 @@ import time
 
 
 # arr = list(range(2000,0,-1))
-arr = list(range(1,11))
+# arr = list(range(1,11))
 # print(arr)
 
-def bubble_sort(arr):
-    n = len(arr)
-    SWAP = False
-    for i in range(n):
-        for j in range(n-i-1):
-            if arr[j]>arr[j+1]:
-                arr[j],arr[j+1]=arr[j+1],arr[j]
-                SWAP = True
-            if not SWAP:
-                break   
-    return arr
+# def bubble_sort(arr):
+#     n = len(arr)
+#     SWAP = False
+#     for i in range(n):
+#         for j in range(n-i-1):
+#             if arr[j]>arr[j+1]:
+#                 arr[j],arr[j+1]=arr[j+1],arr[j]
+#                 SWAP = True
+#             if not SWAP:
+#                 break   
+#     return arr
 
+# start = time.perf_counter()
+# print(bubble_sort(arr))
+# end = time.perf_counter()
+
+# print(f"O(n^2) time taken is : {end-start:.6f}")
+
+
+
+
+# O(log n) — Logarithmic Example (Binary Search)
+
+
+arr = list(range(1000000))
+
+def binary_search(arr, target):
+    low = 1
+    high = len(arr)-1
+    while low<=high:
+        mid = (low+high)//2
+        if arr[mid]==target:
+            return mid
+        elif arr[mid]<target:
+            low=mid+1
+        else:
+            high = mid-1
+    return -1
 start = time.perf_counter()
-print(bubble_sort(arr))
+
+print(binary_search(arr,9999))
+
 end = time.perf_counter()
-
-print(f"O(n^2) time taken is : {end-start:.6f}")
-
-
-
-
-
+print(f"O(log n) Binary Search took: {end - start:.8f} seconds")
 
 
 
