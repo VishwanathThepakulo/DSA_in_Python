@@ -67,21 +67,36 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 # print(find_max(nums))
     
 # revere an array
-nums = [1,2,3,4,5,6,7,8,9,10]
+# nums = [1,2,3,4,5,6,7,8,9,10]
 
-def rev_arr(nums):    
-    return nums[::-1]
-print(rev_arr(nums))
-
-
+# def rev_arr(nums):    
+#     return nums[::-1]
+# print(rev_arr(nums))
 
 
+# Check Duplicatezs
+# nums = [1,2,3,4,5,6,7,8,9,10,1,2]
+# def has_duplicates(nums):
+#     return len(nums) != len(set(nums))
+# print(has_duplicates(nums))
 
 
+# 4. Sum of Array
 
+# nums = [1,2,3,4,5,6,7,8,9,10,1,2]
 
+# def sum_of_array(nums):
+#     return sum(nums)
 
+# print(sum_of_array(nums))
 
+# Second largest array
+# nums = [1,2,3,4,5,6,7,8,9,10,1,2]
+
+# def second_largest(nums):
+#     nums.sort()
+#     return nums[-2]
+# print(second_largest(nums))
 
 
 
