@@ -103,7 +103,17 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 
 
 
+# Remove duplicates
 
+
+arr = [1,1,2,3,4,5,2,1,4,100]
+class Solution:
+    def remDuplicate(self, arr):
+        # code here 
+        return list(set(arr))
+    
+solution = Solution()
+print(solution.remDuplicate(arr))
 
 
 
