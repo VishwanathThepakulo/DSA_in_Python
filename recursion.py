@@ -59,19 +59,44 @@
 #  Sum of array → 
 
 
-arr = [1,2,3,4,5,6,7,8,9,10]
-length = len(arr)
-def sum_of_arr(arr,length):
+# arr = [1,2,3,4,5,6,7,8,9,10]
+# length = len(arr)
+# def sum_of_arr(arr,length):
 
-    if length == 1:
-        return arr[0]
-    sum_of = sum_of_arr(arr,length-1)
-    print(sum_of)
-    # print(arr(length-1))
-    # print(f"{'-'*80}")
-    return arr[length-1]+sum_of
+#     if length == 1:
+#         return arr[0]
+#     sum_of = sum_of_arr(arr,length-1)
+#     print(sum_of)
+#     # print(arr(length-1))
+#     # print(f"{'-'*80}")
+#     return arr[length-1]+sum_of
 
-print(sum_of_arr(arr,length))
+# print(sum_of_arr(arr,length))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

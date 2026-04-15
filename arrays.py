@@ -106,23 +106,50 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 # Remove duplicates
 
 
-arr = [1,1,2,3,4,5,2,1,4,100]
-class Solution:
-    def remDuplicate(self, arr):
-        # code here 
-        return list(set(arr))
+# arr = [1,1,2,3,4,5,2,1,4,100]
+# class Solution:
+#     def remDuplicate(self, arr):
+#         # code here 
+#         return list(set(arr))
     
-solution = Solution()
-print(solution.remDuplicate(arr))
+# solution = Solution()
+# print(solution.remDuplicate(arr))
+
+# Reverse list without built-in
+# arr = [1,1,2,3,4,5,2,1,4,100]
+# print(arr[::-1])
+
+# Find second largest number
+# arr = [1,1,2,3,4,5,2,1,4,80,100]
+# arr.sort()
+# print(arr[-2])
+# arr = [1,1,2,3,4,5,2,1,4,80,100]
+# for i in arr:
+#     print(i)
 
 
 
+# Remove duplicates
+# arr = [1,1,2,3,4,5,2,1,4,80,100]
+# def remDuplicate(arr):
+#     emp_lis=[]
+#     for i in arr:
+#         if i not in emp_lis:
+#             emp_lis.append(i)
+#     return emp_lis
 
+# print(remDuplicate(arr))
+            
 
-
-
-
-
+# Find sum of even numbers
+# arr = [1,2,3,4,5,6,7,8,9,10]
+# def sum_of_even(arr):
+#     n = 0
+#     for i in arr:
+#         if i%2==0:
+#             n+=i
+#     return n
+# print(sum_of_even(arr))  
 
 
 
