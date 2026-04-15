@@ -153,9 +153,19 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 
 
 
+# Check palindrome list
+arr = [1,2,3,2,1]
 
-
-
+def palindrome_list(arr):
+    arr1 = arr.reverse()
+    if len(arr)==1:
+        return "Palindeome"
+    arr1 = arr[::-1]
+    if arr == arr1:
+        return "Palindeome"
+    return "Not a Palindrome"
+    
+print(palindrome_list(arr))
 
 
 
