@@ -116,13 +116,33 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 # print(solution.remDuplicate(arr))
 
 # Reverse list without built-in
-# arr = [1,1,2,3,4,5,2,1,4,100]
+# arr = [1,1,2,3,4,5,2,1,4,100,100]
 # print(arr[::-1])
 
-# Find second largest number
-# arr = [1,1,2,3,4,5,2,1,4,80,100]
-# arr.sort()
-# print(arr[-2])
+
+
+
+
+# Find second largest number ---set = O(n) sort = O(n log n)
+# arr = [1,1,2,3,4,5,2,1,4,80,100,100,80,90,90,1]
+# arr1 = list(set(arr))
+# print(arr1)
+# arr1.sort()
+# print(arr1[-2])
+
+arr = [1,1,2,3,4,5,2,1,4,80,100,100]
+first = second = float('-inf')
+for num in arr:
+    if num > first:
+        second = first
+        first = num
+    elif num>second and num!=first:
+        second = num
+print(second)
+        
+
+
+
 # arr = [1,1,2,3,4,5,2,1,4,80,100]
 # for i in arr:
 #     print(i)
@@ -154,24 +174,35 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 
 
 # Check palindrome list
-arr = [1,2,3,2,1]
+# arr = [1,2,3,2,1]
 
-def palindrome_list(arr):
-    arr1 = arr.reverse()
-    if len(arr)==1:
-        return "Palindeome"
-    arr1 = arr[::-1]
-    if arr == arr1:
-        return "Palindeome"
-    return "Not a Palindrome"
+# def palindrome_list(arr):
+#     if arr == arr[::-1]:
+#         return "Palindrome"
+#     return "Not a Palindrome"
     
-print(palindrome_list(arr))
+# print(palindrome_list(arr))
 
 
 
 
+# 1️⃣ Move all zeros to end
+# 👉 [0,1,0,3,12] → [1,3,12,0,0]
+
+# 2️⃣ Find missing number (1 to n)
+
+# 3️⃣ Rotate array (right/left)
+
+# 4️⃣ Find duplicate element (without set)
+
+# 5️⃣ Two sum (important interview question)
 
 
+# Now try these without built-ins:
 
-
+# 1️⃣ Move zeros to end
+# 2️⃣ Rotate array
+# 3️⃣ Two sum
+# 4️⃣ Find missing number
+# 5️⃣ Find duplicate (no set)
 
