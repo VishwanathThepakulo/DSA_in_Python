@@ -2,7 +2,7 @@
 # Why :- Fast Access, memory efficient, base of all DSA(Stack, queue, hashmap)
 
 # Create
-nums = [1,2,3,4,5,6,7,8,9,10]
+# nums = [1,2,3,4,5,6,7,8,9,10]
 
 # # Access -O(1)
 # print(nums[0])
@@ -116,8 +116,15 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 # print(solution.remDuplicate(arr))
 
 # Reverse list without built-in
-# arr = [1,1,2,3,4,5,2,1,4,100,100]
-# print(arr[::-1])
+# arr = [1,1,2,3,4,5,2,1,4,100,100]  #Two pointers
+# left = 0
+# right = len(arr)-1
+# while left<right:
+#     arr[left], arr[right]=arr[right],arr[left]
+#     left+=1
+#     right-=1
+# print(arr)
+    
 
 
 
@@ -130,15 +137,15 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 # arr1.sort()
 # print(arr1[-2])
 
-arr = [1,1,2,3,4,5,2,1,4,80,100,100]
-first = second = float('-inf')
-for num in arr:
-    if num > first:
-        second = first
-        first = num
-    elif num>second and num!=first:
-        second = num
-print(second)
+# arr = [1,1,2,80,100,100,90]
+# first = second = float('-inf')
+# for num in arr:
+#     if num > first:
+#         second = first
+#         first = num
+#     elif num>second and num!=first:
+#         second = num
+# print(second)
         
 
 
@@ -188,6 +195,19 @@ print(second)
 
 # 1️⃣ Move all zeros to end
 # 👉 [0,1,0,3,12] → [1,3,12,0,0]
+arr = [0,1,0,3,12]
+for i in arr:
+    if i == 0:
+        arr.pop(i)
+        arr.append(0)
+print(arr)
+
+
+
+
+
+
+
 
 # 2️⃣ Find missing number (1 to n)
 
