@@ -193,14 +193,14 @@
 
 
 
-# 1️⃣ Move all zeros to end
+# 1️⃣ Move all zeros to end =========need to solve
 # 👉 [0,1,0,3,12] → [1,3,12,0,0]
-arr = [0,1,0,3,12]
-for i in arr:
-    if i == 0:
-        arr.pop(i)
-        arr.append(0)
-print(arr)
+# arr = [0,1,0,3,12]
+# for i in arr:
+#     if i == 0:
+#         arr.pop(i)
+#         arr.append(0)
+# print(arr)
 
 
 
@@ -210,6 +210,24 @@ print(arr)
 
 
 # 2️⃣ Find missing number (1 to n)
+# arr = [1,2,3,5,6,7]
+# i = 0
+# while i < len(arr)-1:
+#     if arr[i]!=i+1:
+#         print(i+1)
+#         break
+#     i+=1
+# else:
+#     print(len(arr) + 1)  
+
+
+arr = [1,2,3,5,6,7]
+n = len(arr)+1
+total = n*(n+1)//2
+missing = total-sum(arr)
+print(missing)
+
+
 
 # 3️⃣ Rotate array (right/left)
 
