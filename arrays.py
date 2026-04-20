@@ -221,15 +221,23 @@
 #     print(len(arr) + 1)  
 
 
-arr = [1,2,3,5,6,7]
-n = len(arr)+1
-total = n*(n+1)//2
-missing = total-sum(arr)
-print(missing)
+# arr = [1,2,3,5,6,7]
+# n = len(arr)+1
+# total = n*(n+1)//2
+# missing = total-sum(arr)
+# print(missing)
 
 
 
 # 3️⃣ Rotate array (right/left)
+
+arr = [1,2,3,4,5]
+k = 2
+
+k = k % len(arr)   # 7 % 5 = 2
+
+print(arr[-k:] + arr[:-k])
+
 
 # 4️⃣ Find duplicate element (without set)
 
