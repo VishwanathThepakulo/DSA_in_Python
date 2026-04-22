@@ -231,15 +231,29 @@
 
 # 3️⃣ Rotate array (right/left)
 
-arr = [1,2,3,4,5]
-k = 2
+# arr = [1,2,3,4,5]
+# k = 2
 
-k = k % len(arr)   # 7 % 5 = 2
+# k = k % len(arr)  
 
-print(arr[-k:] + arr[:-k])
+# print(arr[-k:] + arr[:-k])
 
 
 # 4️⃣ Find duplicate element (without set)
+
+
+arr = [1,2,3,4,5,2,1,4,80,100]
+def find_duplicate(arr):
+    no_duplicates = []
+    for num in arr:
+        if num not in no_duplicates:
+            no_duplicates.append(num)
+    return no_duplicates
+result = find_duplicate(arr)
+print(f"==========without duplicates=============\n{result}")
+
+
+
 
 # 5️⃣ Two sum (important interview question)
 
