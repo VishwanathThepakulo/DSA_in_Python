@@ -245,12 +245,16 @@
 arr = [1,2,3,4,5,2,1,4,80,100]
 def find_duplicate(arr):
     no_duplicates = []
+    duplicates=[]
     for num in arr:
         if num not in no_duplicates:
             no_duplicates.append(num)
-    return no_duplicates
+        else:
+            duplicates.append(num)
+    return {"no_duplicates":no_duplicates, "duplicates":duplicates}
 result = find_duplicate(arr)
-print(f"==========without duplicates=============\n{result}")
+print(f"==========Values without duplicates=============\n{result["no_duplicates"]}")
+print(f"==========duplicates values=============\n{result["duplicates"]}")
 
 
 
