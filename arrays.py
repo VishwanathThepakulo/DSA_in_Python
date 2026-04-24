@@ -193,15 +193,18 @@
 
 
 
-# 1️⃣ Move all zeros to end =========need to solve
+# 1️⃣ Move all zeros to end
 # 👉 [0,1,0,3,12] → [1,3,12,0,0]
 # arr = [0,1,0,3,12]
-# for i in arr:
-#     if i == 0:
-#         arr.pop(i)
-#         arr.append(0)
-# print(arr)
 
+# i = 0
+
+# for j in range(len(arr)):
+#     if arr[j] != 0:
+#         arr[i], arr[j] = arr[j], arr[i]
+#         i += 1
+
+# print(arr)
 
 
 
@@ -261,23 +264,35 @@
 
 # 5️⃣ Two sum (important interview question)
 
-arr = [1,2,3,4,5,2,1,4,80,100]
-target_num = 6
-def two_sum(arr,target_num):
-    seen = set()
-    res = []
-    for num in arr:
-        check = target_num - num
-        if check in seen:
-            res.append([check, num])
-        seen.add(num)
-    return res
-print(two_sum(arr,target_num))
+# arr = [1,2,3,4,5,2,1,4,80,100]
+# target_num = 6
+# def two_sum(arr,target_num):
+#     seen = set()
+#     res = []
+#     for num in arr:
+#         check = target_num - num
+#         if check in seen:
+#             res.append([check, num])
+#         seen.add(num)
+#     return res
+# print(two_sum(arr,target_num))
 
 
 # Now try these without built-ins:
 
 # 1️⃣ Move zeros to end
+
+
+arr = [1,2,0,4,0,5,6,0,2]
+i = 0
+for j in range(len(arr)):
+    if arr[j]!=0:
+        arr[i],arr[j]=arr[j],arr[i]
+        i+=1
+        
+print(arr)
+
+
 # 2️⃣ Rotate array
 # 3️⃣ Two sum
 # 4️⃣ Find missing number
