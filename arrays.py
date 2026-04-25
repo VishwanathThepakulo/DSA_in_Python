@@ -300,19 +300,41 @@
 # Product of Array Except Self
 
 
-arr  = [1,2,3,4]
-# Output : [24,12,8,6]
-def Product_of_Array_Except_Self(arr):
-    arr1 = []
-    for i in range(len(arr)):
-        prod = 1
-        for j in range(len(arr)):
-            if i == j:
-                continue
-            prod *=arr[j]
-        arr1.append(prod)
-    return arr1
-print(Product_of_Array_Except_Self(arr))
+# arr  = [1,2,3,4]
+# def Product_of_Array_Except_Self(arr):
+#     arr1 = []
+#     for i in range(len(arr)):
+#         prod = 1
+#         for j in range(len(arr)):
+#             if i == j:
+#                 continue
+#             prod *=arr[j]
+#         arr1.append(prod)
+#     return arr1
+# print(Product_of_Array_Except_Self(arr))
 
 
+
+def Product_of_Array_Except_Self_Optimized(arr):
+    n = len(arr)
+    res = [1] * n
+    
+    # Step 1: Prefix products
+    # After this, res[i] contains the product of all elements to the left of i
+    prefix = 1
+    for i in range(n):
+        res[i] = prefix
+        prefix *= arr[i]
+        
+    # Step 2: Suffix products
+    # Multiply the existing res[i] by the product of all elements to the right of i
+    suffix = 1
+    for i in range(n - 1, -1, -1): # Moving backward
+        res[i] *= suffix
+        suffix *= arr[i]
+        
+    return res
+
+arr = [1, 2, 3, 4]
+print(Product_of_Array_Except_Self_Optimized(arr)) # [24, 12, 8, 6]
 
