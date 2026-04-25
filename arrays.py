@@ -236,9 +236,7 @@
 
 # arr = [1,2,3,4,5]
 # k = 2
-
 # k = k % len(arr)  
-
 # print(arr[-k:] + arr[:-k])
 
 
@@ -283,18 +281,38 @@
 # 1️⃣ Move zeros to end
 
 
-arr = [1,2,0,4,0,5,6,0,2]
-i = 0
-for j in range(len(arr)):
-    if arr[j]!=0:
-        arr[i],arr[j]=arr[j],arr[i]
-        i+=1
-        
-print(arr)
+# arr = [1,2,0,4,0,5,6,0,2]
+# i = 0
+# for j in range(len(arr)):
+#     if arr[j]!=0:
+#         arr[i],arr[j]=arr[j],arr[i]
+#         i+=1
+# print(arr)
 
 
 # 2️⃣ Rotate array
+
 # 3️⃣ Two sum
 # 4️⃣ Find missing number
 # 5️⃣ Find duplicate (no set)
+
+
+# Product of Array Except Self
+
+
+arr  = [1,2,3,4]
+# Output : [24,12,8,6]
+def Product_of_Array_Except_Self(arr):
+    arr1 = []
+    for i in range(len(arr)):
+        prod = 1
+        for j in range(len(arr)):
+            if i == j:
+                continue
+            prod *=arr[j]
+        arr1.append(prod)
+    return arr1
+print(Product_of_Array_Except_Self(arr))
+
+
 
