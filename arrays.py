@@ -340,16 +340,24 @@
 
 word1 = 'listen'
 word2 = 'silent'
+# def anagram(word1, word2):
+#     lst1 = list(word1)
+#     lst2 = list(word2)
+#     lst1.sort()
+#     lst2.sort()
+#     if lst1 == lst2:
+#         return True
+#     return False
+    
+# print(anagram(word1, word2))  
+
 def anagram(word1, word2):
-    lst1 = list(word1)
-    lst2 = list(word2)
-    lst1.sort()
-    lst2.sort()
-    if lst1 == lst2:
+    if sorted(word1)==sorted(word2):
         return True
     return False
-    
 print(anagram(word1, word2))  
+
+
 
 
 
