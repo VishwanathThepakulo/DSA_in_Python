@@ -315,26 +315,41 @@
 
 
 
-def Product_of_Array_Except_Self_Optimized(arr):
-    n = len(arr)
-    res = [1] * n
+# def Product_of_Array_Except_Self_Optimized(arr):
+#     n = len(arr)
+#     res = [1] * n
     
-    # Step 1: Prefix products
-    # After this, res[i] contains the product of all elements to the left of i
-    prefix = 1
-    for i in range(n):
-        res[i] = prefix
-        prefix *= arr[i]
+#     # Step 1: Prefix products
+#     # After this, res[i] contains the product of all elements to the left of i
+#     prefix = 1
+#     for i in range(n):
+#         res[i] = prefix
+#         prefix *= arr[i]
         
-    # Step 2: Suffix products
-    # Multiply the existing res[i] by the product of all elements to the right of i
-    suffix = 1
-    for i in range(n - 1, -1, -1): # Moving backward
-        res[i] *= suffix
-        suffix *= arr[i]
+#     # Step 2: Suffix products
+#     # Multiply the existing res[i] by the product of all elements to the right of i
+#     suffix = 1
+#     for i in range(n - 1, -1, -1): # Moving backward
+#         res[i] *= suffix
+#         suffix *= arr[i]
         
-    return res
+#     return res
 
-arr = [1, 2, 3, 4]
-print(Product_of_Array_Except_Self_Optimized(arr)) # [24, 12, 8, 6]
+# arr = [1, 2, 3, 4]
+# print(Product_of_Array_Except_Self_Optimized(arr)) # [24, 12, 8, 6]
+
+word1 = 'listen'
+word2 = 'silent'
+def anagram(word1, word2):
+    lst1 = list(word1)
+    lst2 = list(word2)
+    lst1.sort()
+    lst2.sort()
+    if lst1 == lst2:
+        return True
+    return False
+    
+print(anagram(word1, word2))  
+
+
 
