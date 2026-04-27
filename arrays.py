@@ -338,8 +338,8 @@
 # arr = [1, 2, 3, 4]
 # print(Product_of_Array_Except_Self_Optimized(arr)) # [24, 12, 8, 6]
 
-word1 = 'listen'
-word2 = 'silent'
+# word1 = 'listen'
+# word2 = 'silent'
 # def anagram(word1, word2):
 #     lst1 = list(word1)
 #     lst2 = list(word2)
@@ -351,12 +351,45 @@ word2 = 'silent'
     
 # print(anagram(word1, word2))  
 
-def anagram(word1, word2):
-    if sorted(word1)==sorted(word2):
-        return True
-    return False
-print(anagram(word1, word2))  
+# def anagram(word1, word2):
+#     if sorted(word1)==sorted(word2):
+#         return True
+#     return False
+# print(anagram(word1, word2))  
 
+
+# Best Time to Buy & Sell Stock
+# arr =  [7,10,1,3,6,4,8]
+# def best_time(arr):
+#     lowest = arr[0]
+#     lowest_index = 0
+#     for i in range(len(arr)):
+#         if lowest>arr[i]:
+#             lowest = arr[i]
+#             lowest_index = i
+#     diff = 0
+#     for j in range(lowest_index,len(arr)):
+#         value = arr[j]-lowest
+#         if diff < value:
+#             diff = value
+#     return diff
+# print(best_time(arr))
+
+
+arr = [5, 2, 10, 1, 6]
+def best_time(arr):
+    min_price = arr[0]
+    max_profit = 0
+    for price in arr:
+        if price < min_price:
+            min_price = price
+        else:
+            profit = price-min_price
+            max_profit = max(max_profit, profit)
+    return max_profit
+print(best_time(arr))
+
+    
 
 
 
