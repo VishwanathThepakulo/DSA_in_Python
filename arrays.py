@@ -376,21 +376,30 @@
 # print(best_time(arr))
 
 
-arr = [5, 2, 10, 1, 6]
-def best_time(arr):
-    min_price = arr[0]
-    max_profit = 0
-    for price in arr:
-        if price < min_price:
-            min_price = price
-        else:
-            profit = price-min_price
-            max_profit = max(max_profit, profit)
-    return max_profit
-print(best_time(arr))
+# arr = [5, 2, 10, 1, 6]
+# def best_time(arr):
+#     min_price = arr[0]
+#     max_profit = 0
+#     for price in arr:
+#         if price < min_price:
+#             min_price = price
+#         else:
+#             profit = price-min_price
+#             max_profit = max(max_profit, profit)
+#     return max_profit
+# print(best_time(arr))
 
     
 
-
+# Check if array is sorted
+arr = [1,2,3,6,5]
+def check_arr_is_sorted(arr):
+    arr1 = sorted(arr)
+    print(f"sorted array is :- {arr1}")
+    print(f"array is :- {arr}")
+    if arr1 == arr:
+        return True
+    return False
+print(check_arr_is_sorted(arr))
 
 
