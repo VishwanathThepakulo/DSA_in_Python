@@ -392,14 +392,38 @@
     
 
 # Check if array is sorted
-arr = [1,2,3,6,5]
-def check_arr_is_sorted(arr):
-    arr1 = sorted(arr)
-    print(f"sorted array is :- {arr1}")
-    print(f"array is :- {arr}")
-    if arr1 == arr:
-        return True
-    return False
-print(check_arr_is_sorted(arr))
+
+# sorted(arr) → O(n log n)
+# comparison  → O(n)
+
+# Time complexity = O(n log n) ❌
+
+# arr = [1,2,3,6,5]
+# def check_arr_is_sorted(arr):
+#     arr1 = sorted(arr)
+#     print(f"sorted array is :- {arr1}")
+#     print(f"array is :- {arr}")
+#     if arr1 == arr:
+#         return True
+#     return False
+# print(check_arr_is_sorted(arr))
+
+
+# Single loop → O(n) best 
+
+# arr = [1,2,3,4,5]
+# def check_arr_is_sorted(arr):
+#     for i in range(len(arr)-1):
+#         if arr[i]>arr[i+1]:
+#             return False
+#     return True
+# print(check_arr_is_sorted(arr))
+
+
+
+# Remove duplicates from sorted array
+
+
+
 
 
