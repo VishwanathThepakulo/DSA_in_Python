@@ -423,7 +423,19 @@
 
 # Remove duplicates from sorted array
 
+# arr = [1,2,3,3,4,5,5,6]
+# arr1 = set(arr)
+# print(sorted(arr1))
 
+arr = [1,2,3,3,4,5,5,6]
 
+i = 0  # points to unique position
+
+for j in range(1, len(arr)):
+    if arr[j] != arr[i]:
+        i += 1
+        arr[i] = arr[j]
+
+print(arr[:i+1])
 
 
