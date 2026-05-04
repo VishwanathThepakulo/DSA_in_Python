@@ -427,15 +427,28 @@
 # arr1 = set(arr)
 # print(sorted(arr1))
 
-arr = [1,2,3,3,4,5,5,6]
+# arr = [1,2,3,3,4,5,5,6]
 
-i = 0  # points to unique position
+# i = 0  # points to unique position
 
-for j in range(1, len(arr)):
-    if arr[j] != arr[i]:
-        i += 1
-        arr[i] = arr[j]
+# for j in range(1, len(arr)):
+#     if arr[j] != arr[i]:
+#         i += 1
+#         arr[i] = arr[j]
 
-print(arr[:i+1])
+# print(arr[:i+1])
 
 
+# Move all zeros to end
+
+
+arr = [0,1,2,0,3,5]
+
+def Move_all_zeros_to_end(arr):
+    i = 0
+    for j in range(len(arr)):
+        if arr[j]!=0:
+            arr[i], arr[j] = arr[j], arr[i]
+            i +=1
+    return arr
+print(Move_all_zeros_to_end(arr))    
