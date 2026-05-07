@@ -460,27 +460,42 @@
 # k = 15
 # def left_rotate(arr, k):
 #     k = k % len(arr)
-#     print(k)
 #     return arr[k:]+arr[0:k]
 # print(left_rotate(arr,k))
 
 # Right rotate array by k
 
+# arr = [1,2,3,4,5,6,7,8,9]
+# k = 2
+# def right_rotate(arr, k):
+#     k = k % len(arr)
+#     return arr[-k:]+arr[:-k]
+# print(right_rotate(arr,k))
+
+
+
+
+# left rotate array by k
+
 arr = [1,2,3,4,5,6,7,8,9]
 k = 2
-def left_rotate(arr, k):
-    k = k % len(arr)
-    # print(k)
-    return arr[-k:]+arr[:-k]
-print(left_rotate(arr,k))
 
+def reverse(arr,l,r):
+    while l<r:
+        arr[l],arr[r]=arr[r],arr[l]
+        l+=1
+        r-=1
+    return arr
+# print(reverse(arr,l=0,r=len(arr)-1))
 
-
-
-
-
-
-
+def rotate(arr,k):
+    n = len(arr)
+    k = k%n
+    print(reverse(arr,0,n-1))
+    print(reverse(arr,0,k-1))
+    print(reverse(arr,k,n-1))
+    return arr
+print(rotate(arr,k))
 
 
 
