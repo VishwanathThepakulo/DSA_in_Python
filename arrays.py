@@ -442,13 +442,88 @@
 # Move all zeros to end
 
 
-arr = [0,1,2,0,3,5]
+# arr = [0,1,2,0,3,5]
 
-def Move_all_zeros_to_end(arr):
-    i = 0
-    for j in range(len(arr)):
-        if arr[j]!=0:
-            arr[i], arr[j] = arr[j], arr[i]
-            i +=1
-    return arr
-print(Move_all_zeros_to_end(arr))    
+# def Move_all_zeros_to_end(arr):
+#     i = 0
+#     for j in range(len(arr)):
+#         if arr[j]!=0:
+#             arr[i], arr[j] = arr[j], arr[i]
+#             i +=1
+#     return arr
+# print(Move_all_zeros_to_end(arr))    
+
+
+# Left rotate array by k
+
+# arr = [1,2,3,4,5,6,7,8,9]
+# k = 15
+# def left_rotate(arr, k):
+#     k = k % len(arr)
+#     print(k)
+#     return arr[k:]+arr[0:k]
+# print(left_rotate(arr,k))
+
+# Right rotate array by k
+
+arr = [1,2,3,4,5,6,7,8,9]
+k = 2
+def left_rotate(arr, k):
+    k = k % len(arr)
+    # print(k)
+    return arr[-k:]+arr[:-k]
+print(left_rotate(arr,k))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
