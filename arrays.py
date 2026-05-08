@@ -477,33 +477,60 @@
 
 # left rotate array by k
 
-arr = [1,2,3,4,5,6,7,8,9]
-k = 2
+# arr = [1,2,3,4,5,6,7,8,9]
+# k = 2
 
-def reverse(arr,l,r):
-    while l<r:
-        arr[l],arr[r]=arr[r],arr[l]
-        l+=1
-        r-=1
-    return arr
-# print(reverse(arr,l=0,r=len(arr)-1))
+# def reverse(arr,l,r):
+#     while l<r:
+#         arr[l],arr[r]=arr[r],arr[l]
+#         l+=1
+#         r-=1
+#     return arr
+# # print(reverse(arr,l=0,r=len(arr)-1))
 
-def rotate(arr,k):
+# def rotate(arr,k):
+#     n = len(arr)
+#     k = k%n
+#     print(reverse(arr,0,n-1))
+#     print(reverse(arr,0,k-1))
+#     print(reverse(arr,k,n-1))
+#     return arr
+# print(rotate(arr,k))
+
+
+
+# Find missing number (1 to n)
+arr = [1,2,4,6,7,8,9,6]
+
+def find_missing_and_duplicate(arr):
     n = len(arr)
-    k = k%n
-    print(reverse(arr,0,n-1))
-    print(reverse(arr,0,k-1))
-    print(reverse(arr,k,n-1))
-    return arr
-print(rotate(arr,k))
 
+    expected = set(range(1, n + 1))
+    actual = set(arr)
 
+    # duplicate
+    seen = set()
+    duplicate = set()
 
+    for num in arr:
+        if num in seen:
+            duplicate.add(num)
+        else:
+            seen.add(num)
 
+    # missing
+    missing = expected - actual
 
+    # extra/out-of-range values
+    extra = [num for num in arr if num > n or num < 1]
 
+    return {
+        "duplicate": list(duplicate),
+        "missing": list(missing),
+        "extra": extra
+    }
 
-
+print(find_missing_and_duplicate(arr))
 
 
 
