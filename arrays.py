@@ -541,10 +541,14 @@ arr = [1,2,4,5,8,6,3,7]
 target = 7
 def two_sum(arr,target):
     set_value = set()
+    lst = []
     for i in arr:
-        if target-i in set_value:
-            return (target-i, i)
+        seen = target-i 
+        if seen in set_value:
+            # return (target-i, i)
+            lst.append((seen, i))
         set_value.add(i)
+    return lst
 print(two_sum(arr,target))
              
 
