@@ -500,44 +500,53 @@
 
 
 # Find missing number (1 to n)
-arr = [1,2,4,6,7,8,9,6]
+# arr = [1,2,4,6,7,8,9,6]
 
-def find_missing_and_duplicate(arr):
-    n = len(arr)
+# def find_missing_and_duplicate(arr):
+#     n = len(arr)
 
-    expected = set(range(1, n + 1))
-    actual = set(arr)
+#     expected = set(range(1, n + 1))
+#     actual = set(arr)
 
-    # duplicate
-    seen = set()
-    duplicate = set()
+#     # duplicate
+#     seen = set()
+#     duplicate = set()
 
-    for num in arr:
-        if num in seen:
-            duplicate.add(num)
-        else:
-            seen.add(num)
+#     for num in arr:
+#         if num in seen:
+#             duplicate.add(num)
+#         else:
+#             seen.add(num)
 
-    # missing
-    missing = expected - actual
+#     # missing
+#     missing = expected - actual
 
-    # extra/out-of-range values
-    extra = [num for num in arr if num > n or num < 1]
+#     # extra/out-of-range values
+#     extra = [num for num in arr if num > n or num < 1]
 
-    return {
-        "duplicate": list(duplicate),
-        "missing": list(missing),
-        "extra": extra
-    }
+#     return {
+#         "duplicate": list(duplicate),
+#         "missing": list(missing),
+#         "extra": extra
+#     }
 
-print(find_missing_and_duplicate(arr))
-
-
+# print(find_missing_and_duplicate(arr))
 
 
 
 
+# Two Sum (unsorted)
 
+arr = [1,2,4,5,8,6,3,7]
+target = 7
+def two_sum(arr,target):
+    set_value = set()
+    for i in arr:
+        if target-i in set_value:
+            return (target-i, i)
+        set_value.add(i)
+print(two_sum(arr,target))
+             
 
 
 
