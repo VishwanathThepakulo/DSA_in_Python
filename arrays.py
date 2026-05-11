@@ -537,27 +537,39 @@
 
 # Two Sum (unsorted)
 
-arr = [1,2,4,5,8,6,3,7]
-target = 7
-def two_sum(arr,target):
-    set_value = set()
-    lst = []
-    for i in arr:
-        seen = target-i 
-        if seen in set_value:
-            # return (target-i, i)
-            lst.append((seen, i))
-        set_value.add(i)
-    return lst
-print(two_sum(arr,target))
+# arr = [1,2,4,5,8,6,3,7]
+# target = 7
+# def two_sum(arr,target):
+#     set_value = set()
+#     lst = []
+#     for i in arr:
+#         seen = target-i 
+#         if seen in set_value:
+#             # return (seen, i)
+#             lst.append((seen, i))
+#         set_value.add(i)
+#     return lst
+# print(two_sum(arr,target))
              
 
+# Two Sum (sorted → two pointer)
 
 
+arr = [1,2,3,4,6]
+target = 11
 
-
-
-
+def two_sum(arr, target):
+    ln = len(arr)-1
+    i = 0
+    while i<ln:
+        if arr[i]+arr[ln]==target:
+            return (arr[i],arr[ln])
+        if arr[i]+arr[ln]>target:
+            ln-=1
+        if arr[i]+arr[ln]<target:
+            i+=1
+    return "pair not fount"
+print(two_sum(arr,target))
 
 
 
