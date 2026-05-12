@@ -573,27 +573,27 @@
 
 # Maximum subarray sum (Kadane’s)
 
-arr = [2,5,-8,7,-1,2,3]
+# arr = [2,5,-8,7,-1,2,3]
 
-def Maximum_subarray_sum(arr):
-    current_sum = arr[0]
-    max_sum = arr[0]
-    for i in range(1,len(arr)):
-        current_sum = max(arr[i], current_sum+arr[i])
-        max_sum = max(current_sum, max_sum)
-    return max_sum
-print(Maximum_subarray_sum(arr))
+# def Maximum_subarray_sum(arr):
+#     current_sum = arr[0]
+#     max_sum = arr[0]
+#     for i in range(1,len(arr)):
+#         current_sum = max(arr[i], current_sum+arr[i])
+#         max_sum = max(current_sum, max_sum)
+#     return max_sum
+# print(Maximum_subarray_sum(arr))
 
 
 
 
 # Union of 2 Sorted Arrays 
 
-a = [1,2,3,4,5,6] 
-b = [1,2,3,7,8] 
-result = set(a+b) 
-ans = sorted(list(result)) 
-print(ans)
+# a = [1,2,3,4,5,6] 
+# b = [1,2,3,7,8] 
+# result = set(a+b) 
+# ans = sorted(list(result)) 
+# print(ans)
 
 
 
