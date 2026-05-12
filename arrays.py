@@ -555,27 +555,34 @@
 # Two Sum (sorted → two pointer)
 
 
-arr = [1,2,3,4,6]
-target = 11
+# arr = [1,2,3,4,6]
+# target = 11
 
-def two_sum(arr, target):
-    ln = len(arr)-1
-    i = 0
-    while i<ln:
-        if arr[i]+arr[ln]==target:
-            return (arr[i],arr[ln])
-        if arr[i]+arr[ln]>target:
-            ln-=1
-        if arr[i]+arr[ln]<target:
-            i+=1
-    return "pair not fount"
-print(two_sum(arr,target))
+# def two_sum(arr, target):
+#     ln = len(arr)-1
+#     i = 0
+#     while i<ln:
+#         if arr[i]+arr[ln]==target:
+#             return (arr[i],arr[ln])
+#         if arr[i]+arr[ln]>target:
+#             ln-=1
+#         if arr[i]+arr[ln]<target:
+#             i+=1
+#     return "pair not fount"
+# print(two_sum(arr,target))
 
+# Maximum subarray sum (Kadane’s)
 
+arr = [2,5,-8,7,-1,2,3]
 
-
-
-
+def Maximum_subarray_sum(arr):
+    current_sum = arr[0]
+    max_sum = arr[0]
+    for i in range(1,len(arr)):
+        current_sum = max(arr[i], current_sum+arr[i])
+        max_sum = max(current_sum, max_sum)
+    return max_sum
+print(Maximum_subarray_sum(arr))
 
 
 
