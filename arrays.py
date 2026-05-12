@@ -587,7 +587,13 @@ print(Maximum_subarray_sum(arr))
 
 
 
+# Union of 2 Sorted Arrays 
 
+a = [1,2,3,4,5,6] 
+b = [1,2,3,7,8] 
+result = set(a+b) 
+ans = sorted(list(result)) 
+print(ans)
 
 
 
