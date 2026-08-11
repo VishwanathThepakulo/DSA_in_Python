@@ -152,49 +152,49 @@ import time
 
 
 
-import time
+# import time
 
 
 
-def merge_sort(arr):
-    if len(arr) <= 1:
-        return arr
+# def merge_sort(arr):
+#     if len(arr) <= 1:
+#         return arr
 
-    # 1. Divide: Find the midpoint and split the list (log n steps)
-    mid = len(arr) // 2
-    left = merge_sort(arr[:mid])
-    right = merge_sort(arr[mid:])
+#     # 1. Divide: Find the midpoint and split the list (log n steps)
+#     mid = len(arr) // 2
+#     left = merge_sort(arr[:mid])
+#     right = merge_sort(arr[mid:])
 
-    # 2. Conquer: Merge the sorted halves (n steps)
-    return merge(left, right)
+#     # 2. Conquer: Merge the sorted halves (n steps)
+#     return merge(left, right)
 
-def merge(left, right):
-    result = []
-    i = j = 0
+# def merge(left, right):
+#     result = []
+#     i = j = 0
     
-    # Compare elements from both halves and build the sorted list
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            result.append(left[i])
-            i += 1
-        else:
-            result.append(right[j])
-            j += 1
+#     # Compare elements from both halves and build the sorted list
+#     while i < len(left) and j < len(right):
+#         if left[i] < right[j]:
+#             result.append(left[i])
+#             i += 1
+#         else:
+#             result.append(right[j])
+#             j += 1
             
-    # Add any remaining elements
-    result.extend(left[i:])
-    result.extend(right[j:])
-    return result
+#     # Add any remaining elements
+#     result.extend(left[i:])
+#     result.extend(right[j:])
+#     return result
 
-# Testing with 10,000 items
-# (Try this against the Bubble Sort from before—the difference is massive!)
-data = list(range(10,0,-1))
+# # Testing with 10,000 items
+# # (Try this against the Bubble Sort from before—the difference is massive!)
+# data = list(range(10,0,-1))
 
-start = time.perf_counter()
-sorted_data = merge_sort(data)
-end = time.perf_counter()
+# start = time.perf_counter()
+# sorted_data = merge_sort(data)
+# end = time.perf_counter()
 
-print(f"O(n log n) Merge Sort took: {end - start:.4f} seconds")
+# print(f"O(n log n) Merge Sort took: {end - start:.4f} seconds")
 
 
 

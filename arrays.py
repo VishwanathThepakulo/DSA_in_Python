@@ -613,6 +613,37 @@
 #     result[i]=prefix[i]*suffix[i]
 # print(result)
 
+
+
+def reverse_array(arr):
+    left = 0 
+    right = len(arr)-1
+    while left<right:
+        arr[left], arr[right]=arr[right],arr[left]
+        left+=1
+        right-=1
+    return arr
+    
+print(reverse_array([1, 2, 3, 4, 5])) 
+
+
+def rev_string(s:str)->str:
+    s=list(s)
+    left,right = 0, len(s)-1
+    while left<right:
+        s[left],s[right]=s[right],s[left]
+        left+=1
+        right-=1
+    return "".join(s)    
+    
+print(rev_string('Vishwanath'))
+    
+
+
+
+
+
+
 class Solution:
     def missingNum(self, arr):
         # code here
