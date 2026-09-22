@@ -1,16 +1,23 @@
 class Solution:
     def firstSearch(self, arr, k):
         low = 0
-        high = len(arr)-1
-        while low<=high:
-            mid = low+(high//2)
+        high = len(arr) - 1
+
+        while low <= high:
+            mid = low + (high - low) // 2
+
             if arr[mid] == k:
                 return arr[mid]
-            elif arr[mid]<k:
-                high = mid
+            elif arr[mid] < k:
+                low = mid + 1
             else:
-                low = mid
+                high = mid - 1
+
         return -1
-        
+
+
 solution = Solution()
-print(solution.firstSearch([1,2,3,4,5,6,7,8,9,10,11,12,13,15,16,18,19,20,22,26,28,29,30],3))
+print(solution.firstSearch(
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 18, 19, 20, 22, 26, 28, 29, 30],
+    3
+))
