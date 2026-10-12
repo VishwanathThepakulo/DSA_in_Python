@@ -9,8 +9,8 @@ class Solution:
             no=no//10
         print(sum)
         if sum%9==0:
-            return "Yes"
-        return 'No'
+            return True
+        return False
     
 solution = Solution()
 print(solution.isDivisibleBy9("234567876799333"))
