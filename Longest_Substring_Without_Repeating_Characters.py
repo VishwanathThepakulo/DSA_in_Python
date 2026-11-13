@@ -21,23 +21,6 @@ print(sol.lengthOfLongestSubstring(s))
 
 
 
-# a = "pwwkew"
-# lis = []
-
-# for j in range(len(a)):
-#     ch = ""
-
-#     for i in range(j, len(a)):
-#         if a[i] in ch:
-#             break
-
-#         ch += a[i]
-
-#     lis.append(ch)
-
-# print(lis)
-
-
 
 
 
